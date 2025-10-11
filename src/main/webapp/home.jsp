@@ -1,16 +1,10 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Subham
-  Date: 11-10-2025
-  Time: 11:37 pm
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
 <html>
-  <head>
-    <title>$Title$</title>
-  </head>
-  <body>
-  $END$
-  </body>
+<head>
+    <title>Student Management System</title>
+</head>
+<body>
+<h1>Welcome to Student Management System</h1>
+</body>
 </html>
