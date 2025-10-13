@@ -37,7 +37,7 @@ public class DashboardController extends HttpServlet {
                 request.getRequestDispatcher("studentDashboard.jsp").forward(request, response);
                 break;
             default:
-                response.sendRedirect("login.jsp"); // unknown role
+                response.sendRedirect("login.jsp");
         }
     }
 }

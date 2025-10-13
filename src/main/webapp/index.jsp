@@ -2,14 +2,19 @@
 <html>
 <head>
     <title>Login</title>
+    <link rel="stylesheet" href="src/styles.css">
 </head>
 <body>
-<h2>Login</h2>
+<header>
+    <h1>Student Management ystem</h1>
+</header>
+
 <form action="LoginServlet" method="post">
-    Username: <input type="text" name="username" required /><br/>
-    Password: <input type="password" name="password" required /><br/>
-    <input type="submit" value="Login"/>
+    Username: <input type="text" class="text-input" name="username" placeholder="Enter your text..." required> <br>
+    Password: <input type="password" name="password" class="text-input" placeholder="Enter your password..." required /><br/>
+    <input type="submit" value="Login" class="btn-submit"/>
 </form>
+
 <% String error = (String) request.getAttribute("error");
     if(error != null){ %>
 <p style="color:red;"><%= error %></p>
