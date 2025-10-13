@@ -6,7 +6,7 @@
 </head>
 <body>
 <header>
-    <h1>Student Management ystem</h1>
+    <h1>Student Management System</h1>
 </header>
 
 <form action="LoginServlet" method="post">
