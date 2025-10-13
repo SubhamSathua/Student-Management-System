@@ -22,7 +22,7 @@ public class DashboardController extends HttpServlet {
 
         String role = (String) session.getAttribute("role");
 
-        // Forward to JSP based on role
+
         switch (role) {
             case "admin":
                 request.getRequestDispatcher("adminDashboard.jsp").forward(request, response);
