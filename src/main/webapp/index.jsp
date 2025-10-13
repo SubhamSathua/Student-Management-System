@@ -15,7 +15,6 @@
     <input type="submit" value="Login" class="btn-submit"/>
 </form>
 
-
 <% String error = (String) request.getAttribute("error");
     if(error != null){ %>
 <p style="color:red;"><%= error %></p>
