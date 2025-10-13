@@ -28,14 +28,4 @@ This project demonstrates the integration of frontend and backend technologies f
 
 
 
-## 🛠️ Tech Stack
-
-| Category | Technology Used |
-|-----------|-----------------|
-| **Frontend** | HTML, CSS, JSP |
-| **Backend** | Java Servlets, JDBC |
-| **Database** | MySQL |
-| **Server** | Apache Tomcat |
-| **IDE** | IntelliJ IDEA |
-| **Version Control** | Git & GitHub |---
 
