@@ -21,15 +21,15 @@
 
 <div class="card-container">
     <div class="card">
-        <div class="card-icon">📚</div>
+        <div class="card-icon"></div>
         <div class="card-text">Courses</div>
     </div>
     <div class="card">
-        <div class="card-icon">📝</div>
+        <div class="card-icon"></div>
         <div class="card-text">Marks</div>
     </div>
     <div class="card">
-        <div class="card-icon">👤</div>
+        <div class="card-icon"></div>
         <div class="card-text">Profile</div>
     </div>
 </div>

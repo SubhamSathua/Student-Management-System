@@ -17,7 +17,7 @@
 <body>
 
 <header>
-    <h1>Welcome, <%= studentName %></h1>
+<%--    <h1>Welcome, <%= studentName %></h1>--%>
     <form action="LogoutServlet" method="post" style="display:inline;">
         <button type="submit" class="logout-btn">Log Out</button>
     </form>

@@ -17,35 +17,35 @@
 
 <div class="card-container">
     <div class="card" >
-        <div class="card-icon">➕</div>
+        <div class="card-icon"></div>
         <div class="card-text">Add/Register User</div>
     </div>
     <div class="card">
-        <div class="card-icon">👥</div>
+        <div class="card-icon"></div>
         <div class="card-text">User Management</div>
     </div>
     <div class="card">
-        <div class="card-icon">📚</div>
+        <div class="card-icon"></div>
         <div class="card-text">Academic Setup</div>
     </div>
     <div class="card">
-        <div class="card-icon">💰</div>
+        <div class="card-icon"></div>
         <div class="card-text">Fees Control</div>
     </div>
     <div class="card">
-        <div class="card-icon">📝</div>
+        <div class="card-icon"></div>
         <div class="card-text">Exam</div>
     </div>
     <div class="card" >
-        <div class="card-icon">📑</div>
+        <div class="card-icon"></div>
         <div class="card-text">Reports</div>
     </div>
     <div class="card" >
-        <div class="card-icon">💬</div>
+        <div class="card-icon"></div>
         <div class="card-text">Grievance</div>
     </div>
     <div class="card">
-        <div class="card-icon">👤</div>
+        <div class="card-icon"></div>
         <div class="card-text">Profile</div>
     </div>
 </div>
