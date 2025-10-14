@@ -16,7 +16,7 @@
 
 
 <div class="card-container">
-    <div class="card" >
+    <div class="card">
         <div class="card-icon"></div>
         <div class="card-text">Add/Register User</div>
     </div>
@@ -24,10 +24,12 @@
         <div class="card-icon"></div>
         <div class="card-text">User Management</div>
     </div>
-    <div class="card">
-        <div class="card-icon"></div>
-        <div class="card-text">Academic Setup</div>
-    </div>
+    <a href="courseSetup.jsp">
+        <div class="card">
+            <div class="card-icon"></div>
+            <div class="card-text">Course Setup</div>
+        </div>
+    </a>
     <div class="card">
         <div class="card-icon"></div>
         <div class="card-text">Fees Control</div>
@@ -36,11 +38,11 @@
         <div class="card-icon"></div>
         <div class="card-text">Exam</div>
     </div>
-    <div class="card" >
+    <div class="card">
         <div class="card-icon"></div>
         <div class="card-text">Reports</div>
     </div>
-    <div class="card" >
+    <div class="card">
         <div class="card-icon"></div>
         <div class="card-text">Grievance</div>
     </div>

@@ -61,6 +61,17 @@ CREATE TABLE teacherProfile (
     FOREIGN KEY (user_id) REFERENCES login(user_id)
 );
 
+-- all_courses
+CREATE TABLE all_courses (
+    course_id INT AUTO_INCREMENT PRIMARY KEY,
+    course_code VARCHAR(20) NOT NULL,
+    course_name VARCHAR(100) NOT NULL,
+    branch VARCHAR(50) NOT NULL,
+    semester INT NOT NULL,
+    credits INT NOT NULL,
+    status VARCHAR(20) DEFAULT 'active'
+);
+select * from all_courses;
 
 
 -- DANGER ZONE
