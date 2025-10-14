@@ -24,7 +24,7 @@
         <div class="card-icon"></div>
         <div class="card-text">User Management</div>
     </div>
-    <a href="admin/courseSetup.jsp">
+    <a href="courseSetup.jsp">
         <div class="card">
             <div class="card-icon"></div>
             <div class="card-text">Course Setup</div>

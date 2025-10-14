@@ -24,6 +24,6 @@ public class CourseController extends HttpServlet {
         CourseDAO dao = new CourseDAO();
         dao.addCourse(c);
 
-        response.sendRedirect("admin/courseSetup.jsp"); // reload page to show updated courses
+        response.sendRedirect("courseSetup.jsp"); // reload page to show updated courses
     }
 }

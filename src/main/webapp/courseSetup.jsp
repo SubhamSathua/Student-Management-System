@@ -14,11 +14,19 @@
         button { padding: 5px 10px; }
     </style>
 </head>
-<body>
-    <h2 style="text-align:center;">Course Setup</h2>
 
-    <!-- Add Course Form -->
-    <form action="<%=request.getContextPath()%>/CourseServlet" method="post">
+<link rel="stylesheet" href="src/styles.css">
+
+<body>
+<header>
+    <h1>Welcome, Admin</h1>
+    <form action="LogoutServlet" method="post" style="display:inline;">
+        <button type="submit" class="logout-btn">Log Out</button>
+    </form>
+</header>
+
+
+    <form action="CourseServlet" method="post">
         <input type="text" name="courseCode" placeholder="Course Code" required>
         <input type="text" name="courseName" placeholder="Course Name" required>
         <input type="text" name="branch" placeholder="Branch" required>
@@ -31,7 +39,7 @@
         <button type="submit">Add Course</button>
     </form>
 
-    <!-- View Courses -->
+
     <%
         CourseDAO dao = new CourseDAO();
         List<Course> courses = dao.getAllCourses();
