@@ -10,12 +10,12 @@ public class Student {
     private int admissionYear;
     private String status;
 
-    // No-arg constructor (default)
+
     public Student() {
         super();
     }
 
-    // All-args constructor (convenient when creating a full object)
+
     public Student(int studentId,
                    int userId,
                    String rollNo,
@@ -35,7 +35,7 @@ public class Student {
         this.status = status;
     }
 
-    // Optional: constructor without studentId for inserts (DB will auto-generate)
+
     public Student(int userId,
                    String rollNo,
                    String registrationNo,
@@ -53,27 +53,59 @@ public class Student {
         this.status = status;
     }
 
-    public int getStudentId() { return studentId; }
-    public void setStudentId(int studentId) { this.studentId = studentId; }
+    public int getStudentId() {
+        return studentId;
+    }
+    public void setStudentId(int studentId) {
+        this.studentId = studentId;
+    }
 
-    public int getUserId() { return userId; }
-    public void setUserId(int userId) { this.userId = userId; }
+    public int getUserId() {
+        return userId;
+    }
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
 
-    public String getRollNo() { return rollNo; }
-    public void setRollNo(String rollNo) { this.rollNo = rollNo; }
+    public String getRollNo() {
+        return rollNo;
+    }
+    public void setRollNo(String rollNo) {
+        this.rollNo = rollNo;
+    }
 
-    public String getRegistrationNo() { return registrationNo; }
-    public void setRegistrationNo(String registrationNo) { this.registrationNo = registrationNo; }
+    public String getRegistrationNo() {
+        return registrationNo;
+    }
+    public void setRegistrationNo(String registrationNo) {
+        this.registrationNo = registrationNo;
+    }
 
-    public String getDepartment() { return department; }
-    public void setDepartment(String department) { this.department = department; }
+    public String getDepartment() {
+        return department;
+    }
+    public void setDepartment(String department) {
+        this.department = department;
+    }
 
-    public int getSemester() { return semester; }
-    public void setSemester(int semester) { this.semester = semester; }
+    public int getSemester() {
+        return semester;
+    }
+    public void setSemester(int semester) {
+        this.semester = semester;
+    }
 
-    public int getAdmissionYear() { return admissionYear; }
-    public void setAdmissionYear(int admissionYear) { this.admissionYear = admissionYear; }
+    public int getAdmissionYear() {
+        return admissionYear;
+    }
+    public void setAdmissionYear(int admissionYear) {
+        this.admissionYear = admissionYear;
+    }
 
-    public String getStatus() { return status; }
-    public void setStatus(String status) { this.status = status; }
+    public String getStatus() {
+        return status;
+    }
+    public void setStatus(String status) {
+        this.status = status;
+    }
 }
