@@ -19,10 +19,8 @@
 
 <body>
 <header>
-    <h1>Welcome, Admin</h1>
-    <form action="LogoutServlet" method="post" style="display:inline;">
-        <button type="submit" class="logout-btn">Log Out</button>
-    </form>
+    <h1>Setup Course</h1>
+
 </header>
 
 
