@@ -9,7 +9,7 @@
 
 <header>
     <h1>Welcome, Admin</h1>
-    <form action="LogoutServlet" method="post" style="display:inline;">
+    <form action="LogoutServlet" method="post">
         <button type="submit" class="logout-btn">Log Out</button>
     </form>
 </header>
