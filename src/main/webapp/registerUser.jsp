@@ -13,15 +13,19 @@
 </head>
 <body>
 
+
 <header>
-    <h1>Register New User</h1>
-    <form action="LogoutServlet" method="post" style="display:inline;">
-        <button type="submit" class="logout-btn">Logg Out</button>
-    </form>
+    <div class="header-left">
+        <h1>Add User</h1>
+    </div>
+
+    <div class="header-right">
+        <div class="button-group">
+            <a href="<%= request.getContextPath() %>/DashboardServlet"><button class="home-btn">Home</button></a>
+        </div>
+    </div>
 </header>
 
-<div class="card-container">
-    <div class="card form-card">
 
         <%
             String message = (String) request.getAttribute("message");
@@ -37,19 +41,19 @@
         <form action="<%= request.getContextPath() %>/register" method="post" class="user-form">
             <div class="form-group">
                 <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
+                <input type="text" id="username" name="username" class="text-input" required>
             </div>
             <div class="form-group">
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="password" name="password" class="text-input" required>
             </div>
             <div class="form-group">
                 <label for="fullname">Full Name:</label>
-                <input type="text" id="fullname" name="fullname" required>
+                <input type="text" id="fullname" name="fullname" class="text-input" required>
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" class="text-input" required>
             </div>
             <div class="form-group">
                 <label for="role">Role:</label>
@@ -59,14 +63,11 @@
                     <option value="admin">Admin</option>
                 </select>
             </div>
-            <button type="submit" class="btn-primary">Register User</button>
+            <br>
+            <button type="submit" class="btn-submit">Register User</button>
         </form>
 
-        <div class="back-link">
-            <a href="<%= request.getContextPath() %>/adminDashboard.jsp">← Back to Dashboard</a>
-        </div>
-    </div>
-</div>
+
 
 </body>
 </html>

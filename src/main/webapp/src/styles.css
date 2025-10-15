@@ -1,47 +1,112 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f2f5;
-    padding: 20px;
+    margin: 0;
 }
 a {
     text-decoration: none;
 }
 
-/* Header */
 header {
-    background-color: #0078d4;
-    color: white;
-    padding: 15px 20px;
-    border-radius: 8px;
+    position: sticky;
+    left: 0;
+    right: 0;
+    top: 0;
+    border-bottom: 1px solid #e5e5e5;
+    /*border: 1px solid red;*/
+    background: white;
+    padding: 18px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    z-index: 100;
+    margin-bottom: 10px;
+    /*box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);*/
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
 }
 
 header h1 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: -0.5px;
     margin: 0;
-    font-size: 1.5rem;
 }
 
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    letter-spacing: -0.2px;
+}
+
+.nav-links a:hover {
+    color: #1a1a1a;
+}
+
+/* Buttons container */
+.button-group {
+    display: flex;
+    gap: 12px;
+}
+
+/* Home button */
+.home-btn {
+    background: #f3f4f6;
+    color: #1a1a1a;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.2s ease;
+    letter-spacing: -0.2px;
+}
+
+.home-btn:hover {
+    background: #e5e7eb;
+}
+
+/* Logout button */
 .logout-btn {
-    background-color: #e81123;
+    background: #ef4444;
     color: white;
     border: none;
-    padding: 8px 14px;
-    border-radius: 5px;
+    padding: 10px 18px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: background 0.3s;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.2s ease;
+    letter-spacing: -0.2px;
 }
 
 .logout-btn:hover {
-    background-color: #c50f1f;
+    background: #dc2626;
 }
 
-/* text and button */
+
 /* Input field */
 .text-input {
-    width: 100%;
+    width: 420px;
     padding: 10px;
     border-radius: 8px;
     border: 1px solid #ccc;
@@ -71,6 +136,7 @@ header h1 {
 .btn-submit:hover {
     background-color: #005a9e;
 }
+
 /* Card */
 .card {
     background-color: white;
@@ -81,15 +147,15 @@ header h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    margin-top: 20px;
+    /*box-shadow: 0 4px 10px rgba(0,0,0,0.1);*/
+    margin: 20px;
     text-align: center;
     cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: background-color 0.2s, box-shadow 0.2s;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    background-color: whitesmoke;
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
@@ -111,3 +177,40 @@ header h1 {
     flex-wrap: wrap;
     margin-top: 20px;
 }
+
+
+/*Backup*/
+
+
+/* Header */
+/*header {*/
+/*    background-color: #0078d4;*/
+/*    color: white;*/
+/*    padding: 15px 20px;*/
+/*    border-radius: 8px;*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*    margin-bottom: 20px;*/
+/*}*/
+
+/*header h1 {*/
+/*    margin: 0;*/
+/*    font-size: 1.5rem;*/
+/*}*/
+
+/*.logout-btn {*/
+/*    background-color: #e81123;*/
+/*    color: white;*/
+/*    border: none;*/
+/*    padding: 8px 14px;*/
+/*    border-radius: 5px;*/
+/*    cursor: pointer;*/
+/*    transition: background 0.3s;*/
+/*}*/
+
+/*.logout-btn:hover {*/
+/*    background-color: #c50f1f;*/
+/*}*/
+
+/* text and button */
