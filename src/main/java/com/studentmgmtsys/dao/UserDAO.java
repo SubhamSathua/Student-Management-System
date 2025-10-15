@@ -5,6 +5,7 @@ import com.studentmgmtsys.model.User;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException; // Import SQLException
 
 public class UserDAO {
 
@@ -17,7 +18,7 @@ public class UserDAO {
 
         try {
             con = DBConnection.getConnection();
-            ps = con.prepareStatement("SELECT role FROM login WHERE username=? AND password=?");
+            ps = con.prepareStatement("SELECT role FROM login WHERE username=? AND password=?"); // Using 'login' table
 
             ps.setString(1, username);
             ps.setString(2, password);
@@ -42,7 +43,4 @@ public class UserDAO {
         return role;
     }
 
-    public boolean registerUser(User newUser) {
-        return true;
-    }
-}
+   }

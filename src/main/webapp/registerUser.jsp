@@ -1,6 +1,6 @@
 <%--
   Created by IntelliJ IDEA.
-  User: nalin
+  User: nalini
   Date: 15-10-2025
   Time: 07:21 pm
   To change this template use File | Settings | File Templates.
@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>Title</title>
-    <link rel="stylesheet" href="src/styles.css">
+   <link rel="stylesheet" href="src/styles.css">
 </head>
 <body>
 
