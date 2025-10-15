@@ -16,10 +16,12 @@
 
 
 <div class="card-container">
-    <div class="card">
-        <div class="card-icon"></div>
-        <div class="card-text">Add/Register User</div>
-    </div>
+    <a href="<%= request.getContextPath() %>/registerUser.jsp" class="card-link">
+        <div class="card">
+            <div class="card-icon"></div>
+            <div class="card-text">Add/Register User</div>
+        </div>
+    </a>
     <div class="card">
         <div class="card-icon"></div>
         <div class="card-text">User Management</div>

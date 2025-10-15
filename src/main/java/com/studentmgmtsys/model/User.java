@@ -14,6 +14,9 @@ public class User {
         this.status = status;
     }
 
+    public User(String username, String password, String fullname, String email, String role) {
+    }
+
     public int getUserId() {
         return userId;
     }
@@ -43,5 +46,6 @@ public class User {
     }
     public void setStatus(String status) {
         this.status = status;
+        //
     }
 }

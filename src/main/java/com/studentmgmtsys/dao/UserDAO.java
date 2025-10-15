@@ -1,5 +1,7 @@
 package com.studentmgmtsys.dao;
 
+import com.studentmgmtsys.model.User;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -38,5 +40,9 @@ public class UserDAO {
         }
 
         return role;
+    }
+
+    public boolean registerUser(User newUser) {
+        return true;
     }
 }
