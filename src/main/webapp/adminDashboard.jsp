@@ -22,6 +22,7 @@
             <div class="card-text">Add/Register User</div>
         </div>
     </a>
+
     <div class="card">
         <div class="card-icon"></div>
         <div class="card-text">User Management</div>
@@ -32,10 +33,13 @@
             <div class="card-text">Course Setup</div>
         </div>
     </a>
+    <a href="<%= request.getContextPath() %>/admin/feesControl.jsp">
     <div class="card">
         <div class="card-icon"></div>
         <div class="card-text">Fees Control</div>
     </div>
+    </a>
+
     <div class="card">
         <div class="card-icon"></div>
         <div class="card-text">Exam</div>
