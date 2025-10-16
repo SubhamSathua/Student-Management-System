@@ -8,13 +8,22 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+
 </head>
 <body>
 
 <header>
-    <h1>Student Registreation </h1>
-    <a href="registerChoice.jsp" class="btn-submit" style="text-decoration:none;padding:8px 12px;">Back</a>
+    <div class="header-left">
+        <h1>Student Registration</h1>
+    </div>
+
+    <div class="header-right">
+        <div class="button-group">
+            <a href="<%= request.getContextPath() %>/DashboardServlet"><button class="home-btn">Home</button></a>
+        </div>
+    </div>
 </header>
 
 <section style="margin-top: 24px;">
