@@ -9,15 +9,20 @@
 <html>
 <head>
     <title>Reports</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 
 <body>
 <header>
-    <h1>Reports</h1>
-    <form action="LogoutServlet" method="post">
-        <button type="submit" class="logout-btn">Log Out</button>
-    </form>
+    <div class="header-left">
+        <h1>Reports</h1>
+    </div>
+
+    <div class="header-right">
+        <div class="button-group">
+            <a href="<%= request.getContextPath() %>/DashboardServlet"><button class="home-btn">Home</button></a>
+        </div>
+    </div>
 </header>
 
 <div class="card-container">

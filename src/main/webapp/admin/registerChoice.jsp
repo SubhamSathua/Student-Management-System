@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>Register-Choice</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
 <%--    <style></style>--%>
 </head>
 <body>

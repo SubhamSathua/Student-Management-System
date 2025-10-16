@@ -14,11 +14,18 @@
 </head>
 <body>
 <header>
-    <h1>Exam Management</h1>
-    <form action="../LogoutServlet" method="post" style="display:inline;">
-        <button type="submit" class="logout-btn">Log Out</button>
-    </form>
+    <div class="header-left">
+        <h1>Exam Management</h1>
+    </div>
+
+    <div class="header-right">
+        <div class="button-group">
+            <a href="<%= request.getContextPath() %>/DashboardServlet"><button class="home-btn">Home</button></a>
+        </div>
+    </div>
 </header>
+
+
 <div class="card-container">
     <div class="card-icon">📅</div>
     <div class="card-text">Schedule Exam</div>

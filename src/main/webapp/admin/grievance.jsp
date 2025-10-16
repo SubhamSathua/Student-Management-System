@@ -8,15 +8,20 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Grivance-</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Grievance-</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
 <header>
-    <h1>Grivancee</h1>
-    <form action="LogoutServlet" method="post">
-        <button type="submit" class="logout-btn">Log Out</button>
-    </form>
+    <div class="header-left">
+        <h1>Grievancce</h1>
+    </div>
+
+    <div class="header-right">
+        <div class="button-group">
+            <a href="<%= request.getContextPath() %>/DashboardServlet"><button class="home-btn">Home</button></a>
+        </div>
+    </div>
 </header>
 
 

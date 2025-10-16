@@ -19,10 +19,16 @@
 
 <body>
 <header>
-    <h1>Setup Course</h1>
+    <div class="header-left">
+        <h1>Setup Coursesr</h1>
+    </div>
 
+    <div class="header-right">
+        <div class="button-group">
+            <a href="<%= request.getContextPath() %>/DashboardServlet"><button class="home-btn">Home</button></a>
+        </div>
+    </div>
 </header>
-
 
     <form action="CourseServlet" method="post">
         <input type="text" name="courseCode" placeholder="Course Code" required>

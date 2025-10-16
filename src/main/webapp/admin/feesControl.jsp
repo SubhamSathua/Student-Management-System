@@ -9,10 +9,15 @@
 <body>
 
 <header>
-    <h1>Fees Control</h1>
-    <form action="../LogoutServlet" method="post">
-        <button type="submit" class="logout-btn">Log Out</button>
-    </form>
+    <div class="header-left">
+        <h1>Fees Management</h1>
+    </div>
+
+    <div class="header-right">
+        <div class="button-group">
+            <a href="<%= request.getContextPath() %>/DashboardServlet"><button class="home-btn">Home</button></a>
+        </div>
+    </div>
 </header>
 
 
