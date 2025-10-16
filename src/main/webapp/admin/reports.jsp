@@ -10,8 +10,8 @@
 <head>
     <title>Reports</title>
     <link rel="stylesheet" href="assets/css/styles.css">
-
 </head>
+
 <body>
 <header>
     <h1>Reports</h1>
@@ -22,19 +22,19 @@
 
 <div class="card-container">
     <div class="card">
-        <div class="card-icon">👥</div>
+        <div class="card-icon">#</div>
         <div class="card-text">Student Reports</div>
     </div>
     <div class="card">
-        <div class="card-icon">💰</div>
+        <div class="card-icon">#</div>
         <div class="card-text">Fee Reports</div>
     </div>
     <div class="card">
-        <div class="card-icon">📈</div>
+        <div class="card-icon">#</div>
         <div class="card-text">Exam Reports</div>
     </div>
     <div class="card">
-        <div class="card-icon">📋</div>
+        <div class="card-icon">#</div>
         <div class="card-text">System Logs</div>
     </div>
 </div>

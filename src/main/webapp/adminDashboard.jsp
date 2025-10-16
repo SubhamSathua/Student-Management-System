@@ -54,15 +54,20 @@
     </div>
     </a>
 
-
+    <a href="<%= request.getContextPath() %>/admin/grievance.jsp">
     <div class="card">
         <div class="card-icon"></div>
         <div class="card-text">Grievance</div>
     </div>
-    <div class="card">
-        <div class="card-icon"></div>
-        <div class="card-text">Profile</div>
-    </div>
+    </a>
+
+    <a href="<%= request.getContextPath() %>/admin/profile.jsp">
+        <div class="card">
+            <div class="card-icon"></div>
+            <div class="card-text">Profile</div>
+        </div>
+    </a>
+
 </div>
 
 </body>
