@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 
@@ -16,7 +16,7 @@
 
 
 <div class="card-container">
-    <a href="<%= request.getContextPath() %>/registerUser.jsp" class="card-link">
+    <a href="<%= request.getContextPath() %>/admin/registerUser.jsp">
         <div class="card">
             <div class="card-icon"></div>
             <div class="card-text">Add/Register User</div>
@@ -26,7 +26,7 @@
         <div class="card-icon"></div>
         <div class="card-text">User Management</div>
     </div>
-    <a href="courseSetup.jsp">
+    <a href="<%= request.getContextPath() %>/admin/courseSetup.jsp">
         <div class="card">
             <div class="card-icon"></div>
             <div class="card-text">Course Setup</div>
