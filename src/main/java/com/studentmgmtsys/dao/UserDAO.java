@@ -43,4 +43,7 @@ public class UserDAO {
         return role;
     }
 
-   }
+    public boolean registerUser(User newUser) {
+        return false;
+    }
+}

@@ -17,7 +17,7 @@
     <div class="login-container">
         <div class="login-header">
             <h1>Welcome Back</h1>
-            <p>Student Management System</p>
+            <p>Student Management System delta</p>
         </div>
 
         <form action="LoginServlet" method="post">
@@ -36,23 +36,15 @@
 
         <% String error = (String) request.getAttribute("error");
             if (error != null) { %>
-        <p style="color:red;"><%= error %>
+        <p><%= error %>
         </p>
         <% } %>
 
-        <div class="login-footer">
-            <p>Secure access for students and staff</p>
-        </div>
+<%--        <div class="login-footer">--%>
+<%--            <p>Secure access for students and staff</p>--%>
+<%--        </div>--%>
     </div>
 </div>
-
-
-<%--<form action="LoginServlet" method="post">--%>
-<%--    Username: <input type="text" class="log-username" name="username" placeholder="Enter your text..." required> <br>--%>
-<%--    Password: <input type="password" name="log-password" placeholder="Enter your password..." required /><br/>--%>
-<%--    <input type="submit" value="Login" class="btn-submit"/>--%>
-<%--</form>--%>
-
 
 </body>
 </html>
