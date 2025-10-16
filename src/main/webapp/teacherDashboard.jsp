@@ -13,7 +13,7 @@
 <body>
 
 <header>
-    <h1>Welcome teacher</h1>
+    <h1>Teacher Dashboard</h1>
     <form action="LogoutServlet" method="post" style="display:inline;">
         <button type="submit" class="logout-btn">Log Out</button>
     </form>
