@@ -16,7 +16,7 @@ public class DashboardController extends HttpServlet {
 
         HttpSession session = request.getSession(false);
         if (session == null || session.getAttribute("role") == null) {
-            response.sendRedirect("index.jsp"); // not logged in
+            response.sendRedirect("index.jsp");
             return;
         }
 
