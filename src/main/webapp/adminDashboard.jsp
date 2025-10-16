@@ -15,9 +15,10 @@
 </header>
 
 
-<div class="card-container">
-    <a href="<%= request.getContextPath() %>/admin/registerUser.jsp">
-        <div class="card">
+
+
+    <a href="admin/registerChoice.jsp" style="text-decoration:none;color:inherit;">
+        <div class="card-container">
             <div class="card-icon"></div>
             <div class="card-text">Add/Register User</div>
         </div>
