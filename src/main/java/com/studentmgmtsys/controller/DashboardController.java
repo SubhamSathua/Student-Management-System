@@ -21,6 +21,7 @@ public class DashboardController extends HttpServlet {
         }
 
         String role = (String) session.getAttribute("role");
+//        String role = (String) session.getAttribute("role");
 
         if ("admin".equals(role)) {
             request.getRequestDispatcher("adminDashboard.jsp").forward(request, response);
