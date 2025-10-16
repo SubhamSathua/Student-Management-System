@@ -23,7 +23,6 @@ select * from login;
 CREATE TABLE students (
     student_id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
-    roll_no VARCHAR(20) NOT NULL,
     registration_no VARCHAR(30) NOT NULL,
     department VARCHAR(50) NOT NULL,
     semester VARCHAR(10),

@@ -40,14 +40,21 @@
     </div>
     </a>
 
+    <a href="<%= request.getContextPath() %>/admin/exam.jsp">
     <div class="card">
         <div class="card-icon"></div>
         <div class="card-text">Exam</div>
     </div>
+    </a>
+
+    <a href="<%= request.getContextPath() %>/admin/reports.jsp">
     <div class="card">
         <div class="card-icon"></div>
         <div class="card-text">Reports</div>
     </div>
+    </a>
+
+
     <div class="card">
         <div class="card-icon"></div>
         <div class="card-text">Grievance</div>
