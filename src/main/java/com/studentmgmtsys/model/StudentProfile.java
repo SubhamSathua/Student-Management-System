@@ -1,7 +1,7 @@
 package com.studentmgmtsys.model;
 import java.util.Date;
 
-public class Profile {
+public class StudentProfile {
     private String fullName;
     private String email;
     private String phone;
