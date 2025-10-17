@@ -5,7 +5,7 @@ import com.studentmgmtsys.model.User;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException; // Import SQLException
+import java.sql.SQLException;
 
 public class UserDAO {
 
