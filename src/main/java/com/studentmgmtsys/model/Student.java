@@ -56,6 +56,7 @@ public class Student {
     public int getStudentId() {
         return studentId;
     }
+
     public void setStudentId(int studentId) {
         this.studentId = studentId;
     }
@@ -63,6 +64,7 @@ public class Student {
     public int getUserId() {
         return userId;
     }
+
     public void setUserId(int userId) {
         this.userId = userId;
     }
@@ -70,6 +72,7 @@ public class Student {
     public String getRollNo() {
         return rollNo;
     }
+
     public void setRollNo(String rollNo) {
         this.rollNo = rollNo;
     }
@@ -77,6 +80,7 @@ public class Student {
     public String getRegistrationNo() {
         return registrationNo;
     }
+
     public void setRegistrationNo(String registrationNo) {
         this.registrationNo = registrationNo;
     }
@@ -84,6 +88,7 @@ public class Student {
     public String getDepartment() {
         return department;
     }
+
     public void setDepartment(String department) {
         this.department = department;
     }
@@ -93,6 +98,7 @@ public class Student {
     public int getSemester() {
         return semester;
     }
+
     public void setSemester(int semester) {
         this.semester = semester;
     }
@@ -100,6 +106,7 @@ public class Student {
     public int getAdmissionYear() {
         return admissionYear;
     }
+
     public void setAdmissionYear(int admissionYear) {
         this.admissionYear = admissionYear;
     }
@@ -107,6 +114,7 @@ public class Student {
     public String getStatus() {
         return status;
     }
+
     public void setStatus(String status) {
         this.status = status;
     }

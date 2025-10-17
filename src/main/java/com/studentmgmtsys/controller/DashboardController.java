@@ -1,6 +1,7 @@
 package com.studentmgmtsys.controller;
 
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -20,16 +21,23 @@ public class DashboardController extends HttpServlet {
             return;
         }
 
+        RequestDispatcher rd = null;
+        rd = request.getRequestDispatcher("adminDashboard.jsp");
+        rd.forward(request, response);
         String role = (String) session.getAttribute("role");
 
         if ("admin".equals(role)) {
-            request.getRequestDispatcher("adminDashboard.jsp").forward(request, response);
+            rd = request.getRequestDispatcher("adminDashboard.jsp");
+            rd.forward(request, response);
         } else if ("manager".equals(role)) {
-            request.getRequestDispatcher("managementDashboard.jsp").forward(request, response);
+            rd = request.getRequestDispatcher("managementDashboard.jsp");
+            rd.forward(request, response);
         } else if ("teacher".equals(role)) {
-            request.getRequestDispatcher("teacherDashboard.jsp").forward(request, response);
+            rd = request.getRequestDispatcher("teacherDashboard.jsp");
+            rd.forward(request, response);
         } else if ("student".equals(role)) {
-            request.getRequestDispatcher("studentDashboard.jsp").forward(request, response);
+            rd = request.getRequestDispatcher("studentDashboard.jsp");
+            rd.forward(request, response);
         } else {
             response.sendRedirect("login.jsp");
         }
