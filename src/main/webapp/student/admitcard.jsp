@@ -16,45 +16,46 @@
 </head>
 <body>
 <header>
-    <div class="header-left">
-        <h1>Add User</h1>
-    </div>
+    <div>
+        <div>
+            <h1>Add User</h1>
+        </div>
 
-    <div class="header-right">
-        <div class="button-group">
-            <a href="<%= request.getContextPath() %>/DashboardServlet"><button class="home-btn">Home</button></a>
+        <div>
+            <div>
+                <a href="/DashboardServlet"><button>Home</button></a>
+            </div>
         </div>
     </div>
-</header>
-<div class="container mt-5">
-    <div class="card p-4 border-dark shadow-lg">
-        <h2 class="card-title text-center text-dark mb-4">Official Examination Admit Card</h2>
+    <div>
+        <div>
+            <h2>Official Examination Admit Card</h2>
 
-        <div class="row mb-3">
-            <div class="col-6"><strong>Student Name:</strong> </div>
-            <div class="col-6"><strong>Roll Number:</strong> </div>
-        </div>
-        <div class="row mb-4">
-            <div class="col-6"><strong>Examination:</strong> </div>
-            <div class="col-6"><strong>Center Name:</strong> m</div>
-        </div>
+            <div>
+                <div><strong>Student Name:</strong> </div>
+                <div><strong>Roll Number:</strong> </div>
+            </div>
+            <div>
+                <div><strong>Examination:</strong> </div>
+                <div><strong>Center Name:</strong> m</div>
+            </div>
 
-        <table class="table table-bordered text-center">
-            <thead class="bg-light">
-            <tr><th>Date</th><th>Subject Name</th><th>Time</th><th>Room No.</th></tr>
-            </thead>
-            <tbody>
-            <tr><td></td><td></td><td></td><td></td></tr>
-            <tr><td></td><td></td><td></td><td></td></tr>
-            <tr><td></td><td></td><td></td><td> </td></tr>
-            </tbody>
-        </table>
+            <table>
+                <thead>
+                <tr><th>Date</th><th>Subject Name</th><th>Time</th><th>Room No.</th></tr>
+                </thead>
+                <tbody>
+                <tr><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td> </td></tr>
+                </tbody>
+            </table>
 
-        <div class="text-center mt-4">
-            <p>Signature of HOD: ___________</p>
-            <button onclick="window.print()" class="btn btn-primary btn-print mt-3"><i class="bi bi-printer"></i> Print Admit Card</button>
+            <div>
+                <p>Signature of HOD: ___________</p>
+                <button> Print Admit Card</button>
+            </div>
         </div>
     </div>
-</div>
 </body>
 </html>

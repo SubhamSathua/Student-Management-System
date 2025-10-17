@@ -23,31 +23,27 @@
         </div>
     </div>
 </header>
-<div class="container mt-5">
-    <h2 class="mb-4 text-success">Fees and Payments Status</h2>
+<div>
+    <h2>Fees and Payments Status</h2>
 
-    <c:set var="totalDue" value="5000.00"/>
-    <c:set var="statusClass" value="${totalDue > 0 ? 'alert-danger' : 'alert-success'}"/>
-    <c:set var="statusMessage" value="${totalDue > 0 ? 'Outstanding Dues Exist' : 'All Dues Cleared'}"/>
-
-    <div class="alert ${statusClass} fs-4 fw-bold text-center">
-        Current Status: ${statusMessage}
+    <div>
+        Current Status: [Dynamic Status Message]
     </div>
 
-    <div class="card mb-5">
-        <div class="card-header bg-success text-white">
+    <div>
+        <div>
             Outstanding Fees
         </div>
-        <div class="card-body">
-            <h5 class="card-title">Total Due: ₹ ${totalDue}</h5>
-            <p class="card-text">Due Date: 2025-11-30</p>
-            <a href="#" class="btn btn-success">Proceed to Online Payment</a>
+        <div>
+            <h5>Total Due: ₹ [Dynamic Total Due]</h5>
+            <p>Due Date: 2025-11-30</p>
+            <a href="#">Proceed to Online Payment</a>
         </div>
     </div>
 
     <h3>Payment History</h3>
-    <table class="table table-bordered table-striped">
-        <thead class="table-light">
+    <table>
+        <thead>
         <tr><th>Date Paid</th><th>Fee Item</th><th>Amount Paid</th><th>Transaction ID</th></tr>
         </thead>
         <tbody>
