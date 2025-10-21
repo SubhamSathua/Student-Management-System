@@ -32,10 +32,10 @@ public class StudentProfileServlet extends HttpServlet {
         // Forward to JSP
         if (student != null) {
             request.setAttribute("student", student);
-            request.getRequestDispatcher("StudentProfile.jsp").forward(request, response);
+            request.getRequestDispatcher("student/StudentProfile.jsp").forward(request, response);
         } else {
             request.setAttribute("errorMessage", "No profile found for this student.");
-            request.getRequestDispatcher("StudentProfile.jsp").forward(request, response);
+            request.getRequestDispatcher("student/StudentProfile.jsp").forward(request, response);
         }
     }
 }
