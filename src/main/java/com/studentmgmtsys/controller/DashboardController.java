@@ -38,6 +38,7 @@ public class DashboardController extends HttpServlet {
             rd.forward(request, response);
         } else {
             response.sendRedirect("login.jsp");
+
         }
     }
 }
