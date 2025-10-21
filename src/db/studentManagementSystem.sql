@@ -42,7 +42,16 @@ CREATE TABLE studentProfile (
     education VARCHAR(100),
     profile_pic VARCHAR(255),
     FOREIGN KEY (user_id) REFERENCES login(user_id)
+
+
+
+
 );
+INSERT INTO studentProfile (user_id, full_name, email, phone, address, dob, education)
+VALUES (2, 'Rahul Kumar', 'rahul@gmail.com', '9876543210', 'Delhi', '2002-05-10', 'B.Tech');
+
+
+
 
 
 -- teacherProfile
@@ -59,6 +68,8 @@ CREATE TABLE teacherProfile (
     status VARCHAR(20) DEFAULT 'active',
     FOREIGN KEY (user_id) REFERENCES login(user_id)
 );
+INSERT INTO teacherProfile (user_id, full_name, email, phone, department, experience, education)
+VALUES (3, 'Priya Sharma', 'priya@gmail.com', '9998887770', 'Computer Science', '5 years', 'M.Tech');
 
 -- all_courses
 CREATE TABLE all_courses (

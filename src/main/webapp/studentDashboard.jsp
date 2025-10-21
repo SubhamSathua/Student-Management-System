@@ -76,7 +76,7 @@
     </div>
 </a>
 
-<a href="student/profile.jsp">
+<a href="student/StudentProfile.jsp">
     <div class="card">
         <div class="card-icon"></div>
         <div class="card-text">Profile</div>
