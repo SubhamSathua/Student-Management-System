@@ -34,38 +34,43 @@ public class UserDAO {
         return role;
     }
 
-    public int insertUser(String username, String password, String role, String status, Connection con) throws SQLException {
-        String sql = "INSERT INTO login (username, password, role, status) VALUES (?, ?, ?, ?)";
-        try (PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
-            ps.setString(1, username);
-            ps.setString(2, password);
-            ps.setString(3, role);
-            ps.setString(4, status);
+    public boolean isUsernameExists(String username) throws Exception {
+        Connection con = DBConnection.getConnection();
 
-            int rows = ps.executeUpdate();
-            if (rows == 0) throw new SQLException("User insert flaied...");
-
-            try (ResultSet keys = ps.getGeneratedKeys()) {
-                if (keys.next()) {
-                    return keys.getInt(1);
-                }
-                throw new SQLException("User insert failed....");
-            }
-        }
-    }
-
-
-    public boolean usernameExists(String username) {
-        String sql = "SELECT 1 FROM login WHERE username = ?";
-        try (Connection con = DBConnection.getConnection();
-             PreparedStatement ps = con.prepareStatement(sql)) {
+        String sql = "SELECT user_id FROM login WHERE username=?";
+        try (PreparedStatement ps = con.prepareStatement(sql)) {
             ps.setString(1, username);
             try (ResultSet rs = ps.executeQuery()) {
                 return rs.next();
             }
-        } catch (Exception e) {
-            e.printStackTrace();
-            return true;
         }
+    }
+
+    public int registerUser(User user) throws Exception {
+        Connection con = DBConnection.getConnection();
+        int userId = -1;
+        String sql = "INSERT INTO login(username, password, role, status) VALUES (?, ?, ?, ?)";
+
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+
+        try {
+            ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            ps.setString(1, user.getUsername());
+            ps.setString(2, user.getPassword());
+            ps.setString(3, user.getRole());
+            ps.setString(4, user.getStatus());
+            ps.executeUpdate();
+
+            rs = ps.getGeneratedKeys();
+            if (rs.next()) {
+                userId = rs.getInt(1);
+            }
+        } finally {
+            if (rs != null) rs.close();
+            if (ps != null) ps.close();
+        }
+
+        return userId;
     }
 }

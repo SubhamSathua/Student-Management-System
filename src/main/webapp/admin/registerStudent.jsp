@@ -28,7 +28,7 @@
 </header>
 
 <section style="margin-top: 24px;">
-    <form action="<%= request.getContextPath() %>/user/register/student" method="post" style="max-width: 720px;">
+    <form action="<%= request.getContextPath() %>/registerStudent" method="post" style="max-width: 720px;">
         <!-- Login account -->
         <h3>Login Account</h3>
         <p>

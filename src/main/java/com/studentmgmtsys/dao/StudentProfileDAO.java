@@ -1,36 +1,35 @@
-//package com.studentmgmtsys.dao;
-//
-//import java.sql.*;
-//
-//public class StudentProfileDAO {
-//
-//
-//    public int insertProfile(int userId, String fullName, String email, String phone, Connection con) throws SQLException {
-//
-//        if ((fullName == null || fullName.trim().isEmpty()) &&
-//                (email == null || email.trim().isEmpty()) &&
-//                (phone == null || phone.trim().isEmpty())) {
-//            return 0;
-//        }
-//
-//        String sql = "INSERT INTO studentProfile (user_id, full_name, email, phone) VALUES (?, ?, ?, ?)";
-//        try (PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
-//            ps.setInt(1, userId);
-//            ps.setString(2, fullName != null ? fullName : "");
-//            ps.setString(3, email != null ? email : "");
-//            ps.setString(4, phone != null ? phone : "");
-//
-//            int rows = ps.executeUpdate();
-//            if (rows == 0) return 0;
-//
-//            try (ResultSet keys = ps.getGeneratedKeys()) {
-//                if (keys.next()) {
-//                    return keys.getInt(1);
-//                }
-//                return 0;
-//            }
-//        }
-//    }
-//
-//
-//}
+package com.studentmgmtsys.dao;
+
+import com.studentmgmtsys.model.StudentProfile;
+
+import java.sql.*;
+
+public class StudentProfileDAO {
+
+    public void addProfile(StudentProfile profile, int userId) throws Exception {
+        Connection con = DBConnection.getConnection();
+
+        // Skip if all fields are empty
+        boolean isEmpty = (profile.getFullName() == null || profile.getFullName().isEmpty()) &&
+                (profile.getEmail() == null || profile.getEmail().isEmpty()) &&
+                (profile.getPhone() == null || profile.getPhone().isEmpty());
+
+        if (isEmpty) return;
+
+        String sql = "INSERT INTO studentProfile(user_id, full_name, email, phone) VALUES (?, ?, ?, ?)";
+        PreparedStatement ps = null;
+
+        try {
+            ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            ps.setInt(1, userId);
+            ps.setString(2, profile.getFullName() != null ? profile.getFullName() : "");
+            ps.setString(3, profile.getEmail() != null ? profile.getEmail() : "");
+            ps.setString(4, profile.getPhone() != null ? profile.getPhone() : "");
+            ps.executeUpdate();
+        } finally {
+            if (ps != null) ps.close();
+        }
+    }
+
+
+}
