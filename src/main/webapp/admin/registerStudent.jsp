@@ -28,68 +28,84 @@
 </header>
 
 <section style="margin-top: 24px;">
-    <form action="<%= request.getContextPath() %>/registerStudent" method="post" style="max-width: 720px;">
-        <!-- Login account -->
-        <h3>Login Account</h3>
-        <p>
-            <label>Username</label>
-            <input name="username" class="text-input" placeholder="e.g., stud23101" required/>
-        </p>
-        <p>
-            <label>Password</label>
-            <input name="password" type="password" class="text-input" placeholder="temporary password" required/>
-        </p>
-        <p>
-            <label>Status</label>
-            <select name="status" class="text-input" required>
-                <option>active</option>
-                <option>inactive</option>
-            </select>
-        </p>
+    <form action="<%= request.getContextPath() %>/registerStudent" method="post" style="max-width: 720px;" id="regForm" class="form">
+        <h3>Student Login Details</h3>
+        <label>Username</label>
+        <input name="stud_username" class="text-input" placeholder="e.g.CSE23001" required/>
 
-        <h3 style="margin-top:18px;">Student Details</h3>
-        <p>
-            <label>Registration No</label>
-            <input name="registrationNo" class="text-input" placeholder="e.g., 23BCS001" required/>
-        </p>
-        <p>
-            <label>Department</label>
-            <input name="department" class="text-input" placeholder="e.g., CSE" required/>
-        </p>
-        <p>
-            <label>Semester</label>
-            <select name="semester" class="text-input">
-                <option>Sem 1</option>
-                <option>Sem 2</option>
-                <option>Sem 3</option>
-                <option>Sem 4</option>
-                <option>Sem 5</option>
-                <option>Sem 6</option>
-            </select>
-        </p>
-        <p>
-            <label>Admission Year</label>
-            <input name="admissionYear" class="text-input" placeholder="e.g., 2025"/>
-        </p>
+        <label>Password</label>
+        <input name="stud_password" type="password" class="text-input" placeholder="Password" required/>
 
-        <h3 style="margin-top:18px;">Profile (Optional)</h3>
-        <p>
-            <label>Full Name</label>
-            <input name="fullName" class="text-input" placeholder="Student full name"/>
-        </p>
-        <p>
-            <label>Email</label>
-            <input name="email" type="email" class="text-input" placeholder="student@email.com"/>
-        </p>
-        <p>
-            <label>Phone</label>
-            <input name="phone" class="text-input" placeholder="+91-XXXXXXXXXX"/>
-        </p>
+        <label>Status</label>
+        <select name="status" class="text-input" required>
+            <option>active</option>
+            <option>inactive</option>
+        </select>
 
-        <p>
-            <button type="submit" class="btn-submit">Create Student</button>
-        </p>
+        <h3 style="margin-top:18px;">Student Academic Details</h3>
+        <label>Registration No</label>
+        <input name="registrationNo" class="text-input" placeholder="e.g., CSE23001" required/>
+
+        <label>Department</label>
+        <input name="department" class="text-input" placeholder="e.g. CSE" required/>
+
+        <label>Semester</label>
+        <select name="semester" class="text-input">
+            <option>Sem 1</option>
+            <option>Sem 2</option>
+            <option>Sem 3</option>
+            <option>Sem 4</option>
+            <option>Sem 5</option>
+            <option>Sem 6</option>
+            <option>Sem 7</option>
+            <option>Sem 8</option>
+        </select>
+
+        <label>Admission Year</label>
+        <input name="admissionYear" class="text-input" placeholder="e.g. 2025" required/>
+
+        <h3 style="margin-top:18px;">Student Profile</h3>
+        <label>Full Name</label>
+        <input name="fullName" class="text-input" placeholder="Student full name" required/>
+
+        <label>Email</label>
+        <input name="email" type="email" class="text-input" placeholder="student@email.com" required/>
+
+        <label>Phone</label>
+        <input name="phone" type="tel" class="text-input" pattern="\d{10}" maxlength="10" placeholder="Enter Student's mobile" required/>
+
+<%--        TODO: Implement--%>
+        <label>Address</label>
+        <input name="address" type="text" class="text-input" placeholder="Enter Student Address" required/>
+
+        <label>Date Of Birth</label>
+        <input name="dob" type="date" class="text-input" value="2005-01-01" placeholder="Enter Date of Birth" id="dob" required/>
+
+        <label>Father's Name</label>
+        <input name="fatherName" type="text" class="text-input" placeholder="Enter Father's Name" required/>
+
+        <label>Father's Mobile</label>
+        <input name="fatherMobile" type="tel" pattern="\d{10}" maxlength="10" class="text-input" placeholder="Enter Father's Mobile Number" required/>
+
+        <label>Mother's Name</label>
+        <input name="motherName" type="text" class="text-input" placeholder="Enter Mother's Name" required/>
+
+        <label>Mother's Mobile</label>
+        <input name="motherMobile" type="tel" pattern="\d{10}" maxlength="10" class="text-input" placeholder="Enter Mother's Mobile Number" required/>
+
+        <label>Highest Education</label>
+        <input name="education" type="text" class="text-input" placeholder="Enter Highest Education" required/>
+
+
+        <button type="submit" class="btn-submit">Create Student</button>
     </form>
 </section>
+
+<script>
+    const form = document.getElementById('regForm');
+    const dobInput = document.getElementById('dob');
+
+    dobInput.max = new Date().toISOString().split("T")[0];
+</script>
 </body>
 </html>

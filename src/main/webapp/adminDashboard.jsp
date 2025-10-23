@@ -6,15 +6,25 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-<%--jjj--%>
 <header>
     <h1>Welcome, Admin</h1>
     <form action="LogoutServlet" method="post">
         <button type="submit" class="logout-btn">Log Out</button>
     </form>
 </header>
-
-
+<div>
+<%
+    String status = (String) session.getAttribute("status");
+    if ("success".equals(status)) {
+        out.println("<span class='success'>Student registered successfully!</span>");
+    } else if ("error".equals(status)) {
+        out.println("<span class='error'>Registration failed. Please try again.</span>");
+    } else {
+        out.println("<span></span>");
+    }
+    session.removeAttribute("status");
+%>
+</div>
 <div class="card-container">
     <a href="admin/registerChoice.jsp">
         <div class="card">

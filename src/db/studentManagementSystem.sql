@@ -1,17 +1,17 @@
-create database studentManagementSystem;
-use studentManagementSystem;
+create database studentmanagementsystem;
+use studentmanagementsystem;
 
--- Login
-CREATE TABLE login (
-    user_id INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(50) NOT NULL UNIQUE,
-    password VARCHAR(255) NOT NULL,
-    role VARCHAR(40) NOT NULL,
-    status VARCHAR(40) DEFAULT 'active'
+-- login
+create table login (
+    user_id int auto_increment primary key,
+    username varchar(50) not null unique,
+    password varchar(255) not null,
+    role varchar(40) not null,
+    status varchar(40) default 'active'
 );
 
-INSERT INTO login (username, password, role, status)
-VALUES 
+insert into login (username, password, role, status)
+values
 ('admin', '123', 'admin', 'active'),
 ('manager', '123', 'manager', 'active'),
 ('stud23101', '123', 'student', 'active'),
@@ -19,70 +19,69 @@ VALUES
 
 select * from login;
 
--- Students
-CREATE TABLE students (
-    student_id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT NOT NULL,
-    registration_no VARCHAR(30) NOT NULL,
-    department VARCHAR(50) NOT NULL,
-    semester VARCHAR(10),
-    admission_year VARCHAR(10),
-    status VARCHAR(20) DEFAULT 'active',
-    FOREIGN KEY (user_id) REFERENCES login(user_id)
+-- students
+create table students (
+    student_id int auto_increment primary key,
+    user_id int not null,
+    registration_no varchar(30) not null,
+    department varchar(50) not null,
+    semester varchar(10),
+    admission_year varchar(10),
+    status varchar(20) default 'active',
+    foreign key (user_id) references login(user_id)
 );
--- studentProfile
-CREATE TABLE studentProfile (
-    profile_id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT NOT NULL,
-    full_name VARCHAR(100) NOT NULL,
-    email VARCHAR(100) NOT NULL,
-    phone VARCHAR(15),
-    address TEXT,
-    dob DATE,
-    education VARCHAR(100),
-    profile_pic VARCHAR(255),
-    FOREIGN KEY (user_id) REFERENCES login(user_id)
 
-
-
-
+-- studentprofile
+create table studentprofile (
+    profile_id int auto_increment primary key,
+    user_id int not null,
+    full_name varchar(100) not null,
+    email varchar(100) not null,
+    phone varchar(15),
+    address text,
+    dob varchar(10),
+    education varchar(100),
+    profile_pic varchar(255),
+    father_name varchar(100),
+    father_mobile varchar(15),
+    mother_name varchar(100),
+    mother_mobile varchar(15),
+    foreign key (user_id) references login(user_id)
 );
-INSERT INTO studentProfile (user_id, full_name, email, phone, address, dob, education)
-VALUES (2, 'Rahul Kumar', 'rahul@gmail.com', '9876543210', 'Delhi', '2002-05-10', 'B.Tech');
 
+insert into studentprofile (user_id, full_name, email, phone, address, dob, education, father_name, father_mobile, mother_name, mother_mobile) values(3, 'Chandra Chuda', 'chandra@gmail.com', '9876543210', 'kendrapada', '2002-05-10', 'bca', 'ram chuda', '9876543000', 'sita chuda', '9998887776');
+select * from studentprofile;
+drop table studentprofile;
 
-
-
-
--- teacherProfile
-CREATE TABLE teacherProfile (
-    profile_id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT NOT NULL,
-    full_name VARCHAR(100) NOT NULL,
-    email VARCHAR(100) NOT NULL,
-    phone VARCHAR(15),
-    department VARCHAR(50),
-    experience VARCHAR(100),
-    education VARCHAR(100),
-    profile_pic VARCHAR(255),
-    status VARCHAR(20) DEFAULT 'active',
-    FOREIGN KEY (user_id) REFERENCES login(user_id)
+-- teacherprofile
+create table teacherprofile (
+    profile_id int auto_increment primary key,
+    user_id int not null,
+    full_name varchar(100) not null,
+    email varchar(100) not null,
+    phone varchar(15),
+    department varchar(50),
+    experience varchar(100),
+    education varchar(100),
+    profile_pic varchar(255),
+    status varchar(20) default 'active',
+    foreign key (user_id) references login(user_id)
 );
-INSERT INTO teacherProfile (user_id, full_name, email, phone, department, experience, education)
-VALUES (3, 'Priya Sharma', 'priya@gmail.com', '9998887770', 'Computer Science', '5 years', 'M.Tech');
+insert into teacherprofile (user_id, full_name, email, phone, department, experience, education)
+values (3, 'Priya Sharma', 'priya@gmail.com', '9998887770', 'computer science', '5 years', 'm.tech');
 
 -- all_courses
-CREATE TABLE all_courses (
-    course_id INT AUTO_INCREMENT PRIMARY KEY,
-    course_code VARCHAR(20) NOT NULL,
-    course_name VARCHAR(100) NOT NULL,
-    branch VARCHAR(50) NOT NULL,
-    semester INT NOT NULL,
-    credits INT NOT NULL,
-    status VARCHAR(20) DEFAULT 'active'
+create table all_courses (
+    course_id int auto_increment primary key,
+    course_code varchar(20) not null,
+    course_name varchar(100) not null,
+    branch varchar(50) not null,
+    semester int not null,
+    credits int not null,
+    status varchar(20) default 'active'
 );
+
 select * from all_courses;
 
-
--- DANGER ZONE
-drop database studentManagementSystem;
+-- DROP	
+drop database studentmanagementsystem;

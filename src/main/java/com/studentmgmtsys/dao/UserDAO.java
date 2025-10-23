@@ -38,11 +38,18 @@ public class UserDAO {
         Connection con = DBConnection.getConnection();
 
         String sql = "SELECT user_id FROM login WHERE username=?";
-        try (PreparedStatement ps = con.prepareStatement(sql)) {
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+
+        // check if user exists
+        try {
+            ps = con.prepareStatement(sql);
             ps.setString(1, username);
-            try (ResultSet rs = ps.executeQuery()) {
-                return rs.next();
-            }
+            rs = ps.executeQuery();
+            return rs.next();
+        } finally {
+            if (rs != null) rs.close();
+            if (ps != null) ps.close();
         }
     }
 
