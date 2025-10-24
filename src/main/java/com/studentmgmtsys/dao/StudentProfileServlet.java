@@ -29,7 +29,7 @@ public class StudentProfileServlet extends HttpServlet {
                 student.setEmail(rs.getString("email"));
                 student.setPhone(rs.getString("phone"));
                 student.setAddress(rs.getString("address"));
-                student.setDob(rs.getString("dob"));
+                student.setDob(rs.getDate("dob"));
                 student.setEducation(rs.getString("education"));
             }
 

@@ -17,7 +17,7 @@
     <div class="login-container">
         <div class="login-header">
             <h1>Welcome Back</h1>
-            <p>Student Management System</p>
+            <p>Student Management System delta</p>
         </div>
 
         <form action="LoginServlet" method="post">
@@ -36,7 +36,7 @@
 
         <% String error = (String) request.getAttribute("error");
             if (error != null) { %>
-        <p class="errMsg"><%= error %>
+        <p><%= error %>
         </p>
         <% } %>
 
