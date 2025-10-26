@@ -5,13 +5,12 @@ import java.sql.*;
 
 public class StudentDAO {
     public void addStudent(Student student) throws Exception {
-        Connection con = DBConnection.getConnection();
-
         String sql = "INSERT INTO students(user_id, registration_no, department, semester, admission_year, status) VALUES (?, ?, ?, ?, ?, ?)";
-
+        Connection con = null;
         PreparedStatement ps = null;
 
         try {
+            con = DBConnection.getConnection();
             ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setInt(1, student.getUserId());
             ps.setString(2, student.getRegistrationNo());
