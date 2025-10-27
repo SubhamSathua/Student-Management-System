@@ -176,7 +176,53 @@
         <%
             if (allComplaints != null && !allComplaints.isEmpty()) {
         %>
-           
+            <table class="complaint-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Student ID</th>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%
+                        for (Complain complaint : allComplaints) {
+                    %>
+                    <tr>
+                        <td><%= complaint.getId() %></td>
+                        <td><%= complaint.getUserId() %></td>
+                        <td><strong><%= complaint.getTitle() %></strong></td>
+                        <td><%= complaint.getDescription() %></td>
+                        <td>
+                            <% if ("pending".equals(complaint.getStatus())) { %>
+                                <span class="status-pending">PENDING</span>
+                            <% } else { %>
+                                <span class="status-complete">COMPLETE</span>
+                            <% } %>
+                        </td>
+                        <td><%= complaint.getCreatedDate() %></td>
+                        <td>
+                            <% if ("pending".equals(complaint.getStatus())) { %>
+                                <form action="<%= request.getContextPath() %>/grievance" method="post" style="display: inline;">
+                                    <input type="hidden" name="action" value="markComplete">
+                                    <input type="hidden" name="complaintId" value="<%= complaint.getId() %>">
+                                    <button type="submit" class="btn-complete">Mark Complete</button>
+                                </form>
+                            <% } else { %>
+                                <button class="btn-complete" disabled>Already Complete</button>
+                            <% } %>
+                        </td>
+                    </tr>
+                    <%
+                        }
+                    %>
+                </tbody>
+            </table>
+        <%
             } else {
         %>
             <div class="no-complaints">
