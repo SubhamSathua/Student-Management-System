@@ -27,12 +27,6 @@ public class DashboardController extends HttpServlet {
         if ("admin".equals(role)) {
             rd = request.getRequestDispatcher("adminDashboard.jsp");
             rd.forward(request, response);
-        } else if ("manager".equals(role)) {
-            rd = request.getRequestDispatcher("managementDashboard.jsp");
-            rd.forward(request, response);
-        } else if ("teacher".equals(role)) {
-            rd = request.getRequestDispatcher("teacherDashboard.jsp");
-            rd.forward(request, response);
         } else if ("student".equals(role)) {
             rd = request.getRequestDispatcher("studentDashboard.jsp");
             rd.forward(request, response);

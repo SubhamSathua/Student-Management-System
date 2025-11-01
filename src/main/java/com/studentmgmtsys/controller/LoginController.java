@@ -1,6 +1,7 @@
 package com.studentmgmtsys.controller;
 
 import com.studentmgmtsys.dao.UserDAO;
+import com.studentmgmtsys.model.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,12 +21,17 @@ import java.io.IOException;
             String password = request.getParameter("password");
 
             UserDAO userDAO = new UserDAO();
-            String role = userDAO.validateUser(username, password);
+            User user = userDAO.validateUser(username, password);
 
-            if(role != null){
+            int userId = user.getUserId();
+            String role = user.getRole();
+
+
+            if(user != null){
                 HttpSession session = request.getSession();
                 session.setAttribute("username", username);
                 session.setAttribute("role", role);
+                session.setAttribute("user_id", userId);
                 response.sendRedirect("DashboardServlet");
             } else {
                 request.setAttribute("error", "Invalid username or password");

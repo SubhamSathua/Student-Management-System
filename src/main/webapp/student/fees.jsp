@@ -261,7 +261,7 @@
 
 <!-- Modern Payment Form -->
 <div class="payment-form">
-    <h3>Make Payment</h3>
+    <h3>💰 Make Payment</h3>
     
     <div class="form-group">
         <label for="feeSelect">Select Fee to Pay:</label>
@@ -288,7 +288,7 @@
     </div>
     
     <button class="pay-btn" onclick="showPopup()" id="payButton" disabled>
-        Pay Now
+        🚀 Pay Now
     </button>
 </div>
 
@@ -302,15 +302,15 @@
 <!-- Modern Payment Popup -->
 <div id="paymentPopup" class="popup">
     <div class="popup-content">
-        <h3>Secure Payment</h3>
+        <h3>� Secure Payment</h3>
         <p id="feeTypeName">Fee Payment</p>
         <div class="amount" id="popupAmount">₹0</div>
         <p style="color: #6c757d;">Click <strong>Pay Now</strong> to complete your payment securely</p>
         
         <form action="<%= request.getContextPath() %>/fees" method="post" style="display: inline;">
             <input type="hidden" name="feeType" id="hiddenFeeType">
-            <button type="submit" class="confirm-btn">Pay Now</button>
-            <button type="button" class="cancel-btn" onclick="closePopup()">Cancel</button>
+            <button type="submit" class="confirm-btn">💳 Pay Now</button>
+            <button type="button" class="cancel-btn" onclick="closePopup()">❌ Cancel</button>
         </form>
     </div>
 </div>
@@ -340,11 +340,11 @@
         if (select.value) {
             amountInput.value = '₹' + feeAmounts[select.value];
             payButton.disabled = false;
-            payButton.textContent = 'Pay Now';
+            payButton.textContent = '🚀 Pay Now';
         } else {
             amountInput.value = '';
             payButton.disabled = true;
-            payButton.textContent = 'Pay Now';
+            payButton.textContent = '🚀 Pay Now';
         }
     }
     
@@ -353,7 +353,7 @@
         const select = document.getElementById('feeSelect');
         
         if (!select.value) {
-            alert('Please select a fee type first!');
+            alert('⚠️ Please select a fee type first!');
             return;
         }
         

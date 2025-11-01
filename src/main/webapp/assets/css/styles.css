@@ -6,8 +6,11 @@ body {
 a {
     text-decoration: none;
 }
-
-header {
+section {
+    padding: 20px;
+}
+/*header*/
+.header {
     position: sticky;
     left: 0;
     right: 0;
@@ -15,32 +18,49 @@ header {
     border-bottom: 1px solid #e5e5e5;
     /*border: 1px solid red;*/
     background: white;
-    padding: 18px 30px;
+    padding: 15px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
     margin-bottom: 10px;
+     min-height: 50px;
     /*box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);*/
 }
 
 .header-left {
     display: flex;
     align-items: center;
+    gap: 12px;
 }
 
-header h1 {
+.header h1 {
     font-size: 20px;
     font-weight: 700;
     color: #1a1a1a;
     letter-spacing: -0.5px;
     margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.titleHeadIcon {
+    width: 20px;
+    height: 20px;
 }
 
 .header-right {
     display: flex;
     align-items: center;
     gap: 24px;
+    height: auto;
+}
+#logout-form {
+    height: 20px;
 }
 
 .nav-links {
@@ -78,7 +98,9 @@ header h1 {
     transition: background 0.2s ease;
     letter-spacing: -0.2px;
 }
-
+#homeIcon {
+    width: 20px;
+}
 .home-btn:hover {
     background: #e5e7eb;
 }
@@ -100,7 +122,7 @@ header h1 {
     background: #dc2626;
 }
 
-
+/*input*/
 .text-input {
     width: 420px;
     padding: 10px;
@@ -112,8 +134,7 @@ header h1 {
 }
 
 .text-input:focus {
-    border-color: #0078d4;
-    box-shadow: 0 0 5px #0078d4;
+    border: 2px solid #0078d4;
     outline: none;
 }
 
@@ -134,8 +155,8 @@ header h1 {
 
 .card {
     background-color: white;
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
@@ -158,53 +179,73 @@ header h1 {
     margin-bottom: 10px;
     color: #0078d4;
 }
+.card-icon img {
+    width: 80px;
+    /* background: #000; */
+}
 
 .card-text {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #333;
+    font-weight: 500;
 }
 
 
 .card-container {
     display: flex;
-    gap: 20px;
+    gap: 30px;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin-top: 30px;
+    justify-content: center;
+    padding: 20px;
+}
+/*status*/
+.error {
+    color: red;
+    font-size: 0.9rem;
+    margin: 10px 10px 10px 40%;
+    background: white;
+    border: 1px solid red;
+    padding: 10px;
+}
+.success {
+    color: green;
+    font-size: 0.9rem;
+    padding: 10px;
+    background: white;
+    border: 1px solid green;
+    margin: 10px 10px 10px 40%;
+}
+.errMsg {
+    color: red;
+    width: 100%;
+    text-align: center;
 }
 
+/*form*/
+.form {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 10px 16px;
+    max-width: 720px;
+}
 
-/*Backup Header*/
+.form h3,
+.form button,
+.form .btn-submit {
+    grid-column: 1 / span 2;
+    justify-self: start;
+}
 
+.form label {
+    text-align: right;
+    align-self: center;
+    white-space: nowrap;
+}
 
-/* Header */
-/*header {*/
-/*    background-color: #0078d4;*/
-/*    color: white;*/
-/*    padding: 15px 20px;*/
-/*    border-radius: 8px;*/
-/*    display: flex;*/
-/*    justify-content: space-between;*/
-/*    align-items: center;*/
-/*    margin-bottom: 20px;*/
-/*}*/
-
-/*header h1 {*/
-/*    margin: 0;*/
-/*    font-size: 1.5rem;*/
-/*}*/
-
-/*.logout-btn {*/
-/*    background-color: #e81123;*/
-/*    color: white;*/
-/*    border: none;*/
-/*    padding: 8px 14px;*/
-/*    border-radius: 5px;*/
-/*    cursor: pointer;*/
-/*    transition: background 0.3s;*/
-/*}*/
-
-/*.logout-btn:hover {*/
-/*    background-color: #c50f1f;*/
-/*}*/
-
-/* text and button */
+.form input,
+.form select,
+.form textarea {
+    width: 100%;
+    box-sizing: border-box;
+}

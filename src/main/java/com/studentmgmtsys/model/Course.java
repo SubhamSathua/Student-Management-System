@@ -9,6 +9,7 @@ public class Course {
     private int semester;
     private int credits;
     private String status;
+    private int registered; // 0 = not registered, 1 = registered
 
     public Course() {
 
@@ -35,6 +36,9 @@ public class Course {
 
     public String getStatus() { return status; }
     public void setStatus(String status) { this.status = status; }
+
+    public int getRegistered() { return registered; }
+    public void setRegistered(int registered) { this.registered = registered; }
 
     public Course(int courseId, String courseCode, String courseName, String branch, int semester, int credits, String status) {
         this.courseId = courseId;
