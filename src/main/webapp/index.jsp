@@ -4,7 +4,7 @@
     response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
     response.setHeader("Pragma", "no-cache");
     response.setDateHeader("Expires", 0);
-    
+
     // Check if user is already logged in
     HttpSession userSession = request.getSession(false);
     if (userSession != null && userSession.getAttribute("role") != null) {
@@ -16,7 +16,7 @@
         } else if ("student".equals(role)) {
             response.sendRedirect("DashboardServlet");
             return;
-        } 
+        }
     }
 %>
 <html>
@@ -34,19 +34,19 @@
             <div class="brand-logo">
                 <h1>Student Management System</h1>
             </div>
-            
+
             <div class="hero-content">
                 <h2>Powering student-centric education in university.</h2>
                 <p>We help students to manage their academics.</p>
             </div>
-            
+
             <div class="footer-text">
                 <p>Student Management System is a simple manage webapp.</p>
                 <p class="copyright">2025 © All rights reserved & Privacy Policy</p>
             </div>
         </div>
     </div>
-    
+
     <!-- Right Column - Login Form -->
     <div class="right-column">
         <div class="login-container">
@@ -67,15 +67,15 @@
                 <div class="form-group">
                     <input type="password" id="password" name="password" placeholder="Password" required>
                 </div>
-                
-            
+
 
                 <input type="submit" value="LOGIN" class="btn-login">
             </form>
 
             <% String error = (String) request.getAttribute("error");
                 if (error != null) { %>
-            <p class="errMsg"><%= error %></p>
+            <p class="errMsg"><%= error %>
+            </p>
             <% } %>
         </div>
     </div>
@@ -85,7 +85,7 @@
     // Prevent browser back button from showing login page after login
     if (window.history && window.history.pushState) {
         window.history.pushState('forward', null, './');
-        window.addEventListener('popstate', function() {
+        window.addEventListener('popstate', function () {
             window.history.pushState('forward', null, './');
         });
     }
