@@ -7,8 +7,6 @@
     - [1. Prerequisites](#1-prerequisites)
     - [2. Clone and setup](#2-clone-and-setup)
         - [Clone and Setup (Configuration)](#clone-and-setup-configuration)
-        - [Edit DB config — `java/dao/Env.java`](#edit-db-config---javadaoenvjava)
-        - [Database template — `db/stude_sys.sql`](#database-template---dbstude_syssql)
         - [How to obtain JDBC URL (MySQL Workbench)](#how-to-obtain-jdbc-url-mysql-workbench)
     - [3. Build \& Run](#3-build--run)
         - [Run in IntelliJ IDEA](#run-in-intellij-idea)
